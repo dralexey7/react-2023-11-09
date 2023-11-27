@@ -1,22 +1,11 @@
-import { useState } from "react";
-
-export const Counter = ({ min, max, defaultNumber}) => {
-  const [number, setNumber] = useState(Number(defaultNumber));
+export const Counter = ({ value, increment, decrement, min = 0, max = 5 }) => {
   return (
     <div>
-      <button
-        onClick={() =>
-          setNumber((current) => (current < Number(max) ? current + 1 : current))
-        }
-      >
+      <button onClick={increment} disabled={value >= max}>
         +
       </button>
-      <p>{number}</p>
-      <button
-        onClick={() =>
-          setNumber((current) => (current > Number(min) ? current - 1 : current))
-        }
-      >
+      <p>{value}</p>
+      <button onClick={decrement} disabled={value <= min}>
         -
       </button>
     </div>
