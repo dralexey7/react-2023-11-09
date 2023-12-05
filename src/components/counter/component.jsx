@@ -1,11 +1,14 @@
-export const Counter = ({ value, increment, decrement, min = 0, max = 5 }) => {
+import classNames from "classnames";
+import styles from "./styles.module.css";
+
+export const Counter = ({ value, increment, decrement, min = 0, max = 5, className }) => {
   return (
-    <div>
-      <button onClick={increment} disabled={value >= max}>
+    <div className={classNames(styles.container, className)}>
+      <button className={styles.button} onClick={increment} disabled={value >= max}>
         +
       </button>
       <p>{value}</p>
-      <button onClick={decrement} disabled={value <= min}>
+      <button className={styles.button} onClick={decrement} disabled={value <= min}>
         -
       </button>
     </div>

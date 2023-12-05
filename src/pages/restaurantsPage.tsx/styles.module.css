@@ -1,0 +1,9 @@
+.mainContainer {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    background-color: #e2ddf5ff;
+}
+
+.restaurantLocation {
+    justify-self: center;
+}

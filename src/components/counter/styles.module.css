@@ -1,0 +1,12 @@
+.container {
+    flex-direction: row;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    gap: 5px
+}
+
+.button {
+    height:25px;
+    width:25px;
+}
