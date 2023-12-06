@@ -7,13 +7,11 @@ export const Reviews = ({ reviews, className }) => {
   return (
     <div className={classNames(className)}>
       <p className={styles.header}>Reviews</p>
-      <ul>
+      <div className={classNames(styles.reviewsList)}>
         {texts.map((text) => (
-          <li>
-            <Review text={text} />
-          </li>
+          <Review text={text} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

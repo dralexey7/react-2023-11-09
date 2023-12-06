@@ -1,10 +1,10 @@
 .container {
     background-color: rgb(128, 114, 183);
-    width: 80vw;
+    width: 400px;
     height:fit-content;
     min-height: 90%;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 60px 20px 60px;
     display: flex;
     flex-direction: column;
 }
