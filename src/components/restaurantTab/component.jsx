@@ -1,7 +1,11 @@
 import classNames from "classnames";
 import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
+import { selectRestaurantById } from "../../store/features/entities/restaurants/selectors";
 
-export const RestaurantTab = ({ name, onClick, className, isClear }) => {
+export const RestaurantTab = ({ id, onClick, className, isClear }) => {
+  const name = useSelector((state) => selectRestaurantById(state, id)?.name);
+
   return (
     <button
       onClick={onClick}
@@ -11,7 +15,7 @@ export const RestaurantTab = ({ name, onClick, className, isClear }) => {
         className
       )}
     >
-      {name}
+      {isClear ? "Clear" : name}
     </button>
   );
 };
