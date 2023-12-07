@@ -5,29 +5,21 @@ import { Layout } from "../../components/layout/component";
 import styles from "./styles.module.css";
 
 export const RestaurantsPage = ({ restaurants }) => {
-  const [selectedRestaurantName, setSelectedRestaurantName] = useState();
-  const restaurantNames = restaurants.map(({ name }) => name);
-
-  const selectedRestaurant = restaurants.find(
-    ({ name }) => name === selectedRestaurantName
-  );
+  const [selectedRestaurant, setSelectedRestaurant] = useState();
 
   if (!restaurants.length) {
     return null;
   }
-  
+
   return (
     <Layout>
       <div className={styles.mainContainer}>
         <RestaurantTabs
-          restaurantNames={restaurantNames}
-          onRestaurantSelect={(restaurant) =>
-            setSelectedRestaurantName(restaurant)
-          }
+          onRestaurantSelect={setSelectedRestaurant}
         />
         {selectedRestaurant && (
           <Restaurant
-            restaurantData={selectedRestaurant}
+            restaurantId={selectedRestaurant}
             className={styles.restaurantLocation}
           />
         )}
