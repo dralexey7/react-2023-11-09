@@ -1,0 +1,7 @@
+.menuElement {
+    border-bottom: 1px solid black;
+}
+
+.menuElement:last-of-type {
+    border-bottom: unset;
+}

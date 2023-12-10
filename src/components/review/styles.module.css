@@ -1,0 +1,11 @@
+.container {
+    background-color: antiquewhite;
+    height: fit-content;
+    min-height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.text {
+    margin:0px
+}

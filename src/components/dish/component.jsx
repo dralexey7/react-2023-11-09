@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Counter } from "../counter/component";
+import styles from "./styles.module.css";
+import classNames from "classnames";
 
-export const Dish = ({ name }) => {
+export const Dish = ({ name, className }) => {
   const [amount, setAmount] = useState(0);
   return (
-    <div>
+    <div className={classNames(styles.container, className)}>
       <p>{name}</p>
       <Counter
         value={amount}
