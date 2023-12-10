@@ -15,7 +15,7 @@ export const RestaurantsPage = ({ restaurants }) => {
   if (!restaurants.length) {
     return null;
   }
-  console.log(styles);
+  
   return (
     <Layout>
       <div className={styles.mainContainer}>
